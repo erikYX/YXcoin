@@ -18,45 +18,17 @@ libminiupnpc-dev - UPnP IGD client lightweight library dev
 s sudo dd if=/dev/zero of=/swapfile bs=64M count=16    
 $ sudo mkswap /swapfile   
 $ sudo swapon /swapfile   
-  
- $ sudo apt-get install git    
+
  $ cd /usr/local/src    
  $ git clone https://github.com/erikYX/yxcoin.git    
  $ cd yxcoin/src    
  yxcoin/src$ make -f makefile.unix    
- yxcoin/src$ stryxcoin/srcip yxcoin    
+ yxcoin/src$ strip yxcoin/src yxcoin    
  yxcoin/src$ cp -r yxcoin /usr/local/bin/yxcoin    
     
  $ yxcoin & - start yxcoin server daemon     
     
-First time run, it will prompt to create configuration file yxcoin.conf with a suggested password.  
-   
-yxcoin/src$ cd /home/USER/.yxcoin       
-/home/USER/.yxcoin$ nano yxcoin.conf  
 
-Enter following:   
-rpcuser=USER     
-rpcpassword=password   
-   
-server=1   
-listen=1   
-daemon=1   
-rpcallowip=localhost   
-
-
- Commands:   
- $ yxcoin & - start yxcoin server daemon   
- $ yxcoin getinfo - basic info JSON array   
- $ yxcoin excryptwallet <passphrase>   
- $ yxcoin listtransactions - show transactions to wallet   
- $ yxcoin setgenerate true 1 - start mining   
- $ yxcoin getmininginfo - mining status   
- $ yxcoind setgenerate false - stop mining   
- $ yxcoin stop - stop server daemon   
- 
- $ sudo tail -f /home/USER/.yxcoin/debug.log - watch yxcoin network activity   
- 
-  
 Coin data:    
 Coins per block = 23   
 Block Interval = 300   // 5 minutes   
